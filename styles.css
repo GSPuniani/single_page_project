@@ -1,53 +1,79 @@
+/* Set the margin to 0 to occupy the entire width of the window, set the font type, and set the default background color */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #1d1818;
 }
 
+/* Remove the default margin for the body so that there are no unwanted gaps between sections */
 nav, main > section {
     overflow: auto;
 }
 
+/* Set the minimum vertical height of each section to occupy the whole window */
 main > section {
     min-height: 100vh;
 }
 
-/* Style the nav bar */
+/* Style the navigation bar */
+/* Apply flex box */
 #nav {
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1em;
-    background-color: #f51313;
-    color: #eee;
+    /* Most of these properties are also styled in other sections */
+    /* Use flex box to style the navigation bar */
     display: flex;
+    /* Set the spacing between elements in the navigation bar */
+    justify-content: space-evenly;
+    /* Set the orientation and placement of the navigation bar items */
+    align-items: center;
+    align-self: center;
+    padding: 1.5em;
+    /* Style the background color */
+    background-color: #f51313;
+    /* Style the font color */
+    color: #eee;
 }
 
-nav h1, ul {
-    margin: 0
+/* Style text for the top heading of the navigation bar  */
+nav h1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    text-emphasis: bold;
 }
 
+/* Style text for section links in the navigation bar */
+nav h2 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.5em;
+}
+
+/* Remove the underlines for the links and style the font color */
 nav a {
     text-decoration: none;
     color: #eee;
 }
 
+/* Use flex box to create a horizontal row for the navigation links and then remove the bullet points */
 nav ul {
     display: flex;
     list-style: none;
 }
 
+/* Style the font of the links */
 nav ul a {
-    /* give the links a little space */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 1em;
     color: whitesmoke;
     font-size: larger;
 }
 
+/* Adjust the color of the font when the cursor hovers over the section link */
 nav ul a:hover {
-    color: pink;
+    color: darkred;
 }
 
-
+/* Style the primer section */
 #primer {
     /* Set the background color */
     background-color: #26B63E;
@@ -59,8 +85,9 @@ nav ul a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* make the font really big */
-    font-size: 2em;
+    /* padding-top: 10%; */
+    /* Set the size of the font */
+    font-size: 6em;
     color: #fff;
 
 }
@@ -69,27 +96,121 @@ nav ul a:hover {
 #primer > div {
     /* Set position to relative so it can be moved */
     position: relative;
-    max-height: 150px;
-    overflow: hidden;
+    /* max-height: 150px; */
+    /* overflow: hidden; */
     
     /* Move to the left and down */
     
 }
 
-/* Work on the h2 and p */
-#primer h2, #primer p {
+/* Style the paragraphs in primer to have no margin, some black shadow on the bottom, and a white color */
+#primer p {
     margin: 0;
     text-shadow: 0 0 20px #000000;
     color: whitesmoke;
 }
 
-#teams-drivers {
-    background-color: #007AFF;
+/* The text content for the primer is actually outside of the HTML section for the primer for stylistic purposes */
+/* Set the color of the text */
+main > div {
+    color: whitesmoke;
 }
 
-#top-3-ranking {
-    background-color: #5856D6;
+
+/* Set multiple background images to cover the section */
+#teams-drivers {
+    background-color: #007AFF;
+    background-image: url(images/mclaren-team.jpg), url(images/renault-team.jpg);
+    background-repeat: no-repeat;
+    background-size: contain, contain;
+    background-position: bottom, top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }
+
+/* Give the box a transparent wide box with a set maximum width to keep it readable */
+#teams-drivers > div {
+    background-color:rgba(138, 125, 125, 0.53);
+    padding: 1em;
+    width: 75%;
+    max-width: 900px;
+}
+
+/* Make the section heading font very large */
+#teams-drivers h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Adjust the spacing for the paragraphs before the list in this section */
+#teams-drivers > div > p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-shadow: 1px 1px black;
+}
+
+/* Remove the bullet points, margin, and padding  */
+#teams-drivers ul {
+    list-style: none;
+    /* margin: 0; */
+    /* padding: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-shadow: 1px 1px black;
+}
+
+
+/* Style the section on the top 3 drivers, which is presented with 3 side-by-side cards */
+/* Set the background color */
+#top-3-ranking {
+    background-color:#f51313;
+}
+
+/* Remove the bullet points, margin, and padding  */
+#top-3-ranking ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Set the properties for the section heading */
+#top-3-ranking > h2 {
+    margin: 1em;
+    font-size: 3em;
+    text-align: center;
+    color: #eee;
+}
+
+/* Set the width of the card to allow for three of them to fit side by side, and set the margin and background color */
+.card {
+    width: 400px;
+    margin: 1em;
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Set the images of the drivers to occupy the whole width of the card */
+.card img {
+    width: 100%;
+}
+
+/* Set the font side of the names of the drivers on each card */
+.card h3 {
+    font-size: 2em;
+}
+
+/* Set the margin for the names of the drivers and the short paragraph descriptions */
+.card h3, .card p {
+    margin: 1rem;
+}
+
 
 #vehicle-technology {
     background-color: #FF00BE;
@@ -99,6 +220,7 @@ nav ul a:hover {
     background-color: #eed233;
 }
 
+/* Use flex box and set colors for the background and font of the contact form */
 #contact {
     background-color: black;
     color: blanchedalmond;
