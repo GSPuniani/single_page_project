@@ -132,9 +132,9 @@ main > div {
 
 /* Give the box a transparent wide box with a set maximum width to keep it readable */
 #teams-drivers > div {
-    background-color:rgba(138, 125, 125, 0.53);
+    background-color:rgba(3, 3, 3, 0.70);
     padding: 1em;
-    width: 75%;
+    width: 50%;
     max-width: 900px;
 }
 
@@ -142,26 +142,45 @@ main > div {
 #teams-drivers h2 {
     font-size: 4em;
     text-align: center;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 /* Adjust the spacing for the paragraphs before the list in this section */
 #teams-drivers > div > p {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5em;
-    text-shadow: 1px 1px black;
+    /* background-color: rgba(63, 48, 48, 0.35); */
 }
 
 /* Remove the bullet points, margin, and padding  */
 #teams-drivers ul {
     list-style: none;
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0; 
+    padding: 0;  
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    text-shadow: 1px 1px black;
+}
+
+#teams-drivers ul > li:nth-child(even) {
+    display: flex;
+    padding-left: 1em;
+    flex-direction: column;
+    line-height: 0.4em;
+    align-items: flex-end;
+    margin-left: 26%;
+    margin-right: inherit;
+}
+
+/* Style alternating backgrounds for the list items to improve readability */
+#teams-drivers ul > li:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(34, 32, 32, 0.75);
+    padding-left: 1em;
+    align-items: flex-start;
+    line-height: 0.4em;
 }
 
 
