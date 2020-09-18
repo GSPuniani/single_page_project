@@ -76,7 +76,7 @@ nav ul a:hover {
 /* Style the primer section */
 #primer {
     /* Set the background color */
-    background-color: #26B63E;
+    background-color: #f51313;
     /* Set the background image */
     background-image: url(images/hamilton-car.jpg);
     /* Use cover to make the image fill the space */
@@ -112,7 +112,7 @@ main > div {
 
 /* Set multiple background images to cover the section */
 #teams-drivers {
-    background-color: #007AFF;
+    background-color: #f51313;
     background-image: url(images/mclaren-team.jpg), url(images/renault-team.jpg);
     background-repeat: no-repeat;
     background-size: contain, contain;
@@ -156,6 +156,7 @@ main > div {
     align-items: flex-start;
 }
 
+/* Style alternating backgrounds for the list items to improve readability */
 #teams-drivers ul > li:nth-child(even) {
     display: flex;
     padding-left: 1em;
@@ -231,10 +232,16 @@ main > div {
 
 /* Set the properties for the section heading */
 #vehicle-technology h2 {
-    margin-top: 3em;
+    margin-top: 1em;
     font-size: 3em;
     text-align: center;
     color: #eee;
+}
+
+/* Add a black background for the text */
+#vehicle-technology p {
+    background-color: black;
+    padding: 0 1em 0 1em;
 }
 
 /* Set up a flex box for the entire section */
@@ -253,6 +260,7 @@ main > div {
     margin: 0 0 0 2em;
     color: whitesmoke;
     line-height: 1.5;
+    font-size: 1.3em;
 }
 
 /* Set flex factor and margins for image */
@@ -271,22 +279,54 @@ main > div {
 
 /* Style the section on circuits with a picture on one side and text on the other*/
 #circuits {
+    margin-top: 1.3em;
     background-color: #f51313;
+    color: whitesmoke;
     
 }
 
 /* Set the properties for the section heading */
-#circuits > h2 {
-    /* margin-top: 3em; */
+#circuits h2 {
     font-size: 3em;
     text-align: center;
     color: #eee;
 }
 
-/* Remove the bullet points on the list */
+/* Style the paragrpah text  */
+#circuits p {
+    display: flex;
+    margin: 1em 3em 1em 3em;
+    line-height: 1.4;
+    font-size: 1.2em;
+}
+
+/* Add a black background for the text */
+#circuits > div > div > p {
+    background-color: black;
+    padding: 1em 1em 1em 1em;
+}
+
+/* Remove the bullet points on the list and change text color*/
 #circuits ul {
     list-style: none;
+    margin-right: 2.5em;
 }
+
+/* Style alternating items of the list for readibility */
+#circuits ul > li:nth-child(odd) {
+    background-color: rgba(3, 3, 3, 0.70);;
+}
+
+#circuits ul > li:nth-child(even) {
+    background-color: rgba(31, 28, 28, 0.7);;
+}
+/* Style the image */
+#circuits > div img {
+    display: flex;
+    width: 100%;
+    box-shadow:0 0 22px rgba(0, 0, 0, 0.44);
+}
+
 
 /* Style the contact form */
 #contact {
