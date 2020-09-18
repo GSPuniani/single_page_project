@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #1d1818;
+    background-color: #f51313;
 }
 
 /* Remove the default margin for the body so that there are no unwanted gaps between sections */
@@ -92,17 +92,6 @@ nav ul a:hover {
 
 }
 
-/* lets push the div down and to the left */
-#primer > div {
-    /* Set position to relative so it can be moved */
-    position: relative;
-    /* max-height: 150px; */
-    /* overflow: hidden; */
-    
-    /* Move to the left and down */
-    
-}
-
 /* Style the paragraphs in primer to have no margin, some black shadow on the bottom, and a white color */
 #primer p {
     margin: 0;
@@ -114,6 +103,10 @@ nav ul a:hover {
 /* Set the color of the text */
 main > div {
     color: whitesmoke;
+    margin: 2em 2em 2em 2em;
+    line-height: 1.5;
+    background-color: black;
+    padding: 1em 1em 1em 1em;
 }
 
 
@@ -231,25 +224,122 @@ main > div {
 }
 
 
+/* Style the section on vehicle technology with a picture on one side and text on the other*/
 #vehicle-technology {
-    background-color: #FF00BE;
+    background-color: #f51313;
 }
 
+/* Set the properties for the section heading */
+#vehicle-technology h2 {
+    margin-top: 3em;
+    font-size: 3em;
+    text-align: center;
+    color: #eee;
+}
+
+/* Set up a flex box for the entire section */
+#vehicle-technology > div {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/* Set flex factor and margins and style text */
+#vehicle-technology > div > div:nth-child(1) {
+    flex: 5;
+    margin: 0 0 0 2em;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/* Set flex factor and margins for image */
+#vehicle-technology > div > div:nth-child(2) {
+    flex: 5;
+    margin: 10em 2em 0 0;
+}
+
+/* Style the image */
+#vehicle-technology > div img {
+    display: flex;
+    width: 100%;
+    box-shadow:0 0 22px rgba(0, 0, 0, 0.44);
+}
+
+
+/* Style the section on circuits with a picture on one side and text on the other*/
 #circuits {
-    background-color: #eed233;
+    background-color: #f51313;
+    
 }
 
-/* Use flex box and set colors for the background and font of the contact form */
+/* Set the properties for the section heading */
+#circuits > h2 {
+    /* margin-top: 3em; */
+    font-size: 3em;
+    text-align: center;
+    color: #eee;
+}
+
+/* Remove the bullet points on the list */
+#circuits ul {
+    list-style: none;
+}
+
+/* Style the contact form */
 #contact {
     background-color: black;
-    color: blanchedalmond;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+#contact > form {
+    display: flex;
+}
+
+#contact > form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+label {
+    margin: 1em 0;
+}
+
+label span {
+    margin: 1em 0;
+}
+
+input, textarea {
+    border: 1px solid #000;
+    padding: 0.5em;
+    margin: 0 2em 0 0;
+    width: 20em;
+    font-size: 1em;
 }
 
 textarea {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+    height: 9em;
+    margin: 0 0 0 0;
+}
+
+form button {
+    width: auto;
+    font-size: 1em;
+    margin-left: 3em;
+    align-self: center;
+    padding: 0.5em 1em;
+    background-color: red;
+    color: #fff;
+    border: none;
 }
